@@ -1,0 +1,20 @@
+package com.stackoverflow.pizza.model;
+
+import lombok.Data;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.List;
+
+
+@Data
+public class Pizza {
+
+    @NotNull
+    @Size(min=5,message = "Name must be at least 5 characters long")
+    private String name;
+
+     @Size(min=2,message = "You must choose a t least one ingredient")
+    private List<String> ingredients;
+
+}
